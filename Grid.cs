@@ -24,11 +24,6 @@ namespace The_Fountain_of_objects
             _grid.Add(_rows);
             _grid.Add(_columns);
 
-            //for (int i = 0; i < _grid.Count(); i++)
-            //{
-            //    Console.WriteLine(_grid[i]);
-            //}
-
             foreach (var item in _grid)
             {
                 Console.WriteLine(_grid[0].Count());
