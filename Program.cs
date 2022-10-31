@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace The_Fountain_of_objects
 {
@@ -7,6 +8,12 @@ namespace The_Fountain_of_objects
         static void Main(string[] args)
         {
             var grid = new Map(4);
+            Move.GetMapSize(Map._rows.Count);
+            while (true)
+            {
+                Move.Movement();
+            }
+            
         }
     }
 }
