@@ -9,10 +9,12 @@ namespace The_Fountain_of_objects
         {
             var grid = new Map(4);
             Move.GetMapSize(Map._rows.Count);
-            while (true)
-            {
+
+            
+
                 Move.Movement();
-            }
+            
+            
             
         }
     }
