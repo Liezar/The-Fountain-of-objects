@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace The_Fountain_of_objects
 {
-    public class Grid
+    public class Map
     {
-        public List<List<int>> _grid = new();
-        private List<int> _rows = new();
-        private List<int> _columns = new();
+        private static List<List<int>> _grid = new();
+        private static List<int> _rows = new();
+        private static List<int> _columns = new();
 
-        public void CreateGrid(int gridSize)
+        public static List<List<int>> Grid(int gridSize)
         {
             for (int i = 0; i < gridSize; i++)
             {
@@ -24,10 +24,7 @@ namespace The_Fountain_of_objects
             _grid.Add(_rows);
             _grid.Add(_columns);
 
-            foreach (var item in _grid)
-            {
-                Console.WriteLine(_grid[0].Count());
-            }
+            return _grid;
         }
     }
 }
