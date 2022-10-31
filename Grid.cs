@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,18 +9,29 @@ namespace The_Fountain_of_objects
 {
     public class Grid
     {
-        public static void CreateGrid(int size)
+        public List<List<int>> _grid = new();
+        private List<int> _rows = new();
+        private List<int> _columns = new();
+
+        public void CreateGrid(int gridSize)
         {
-            Console.WriteLine("Skriv in hur stor mapp");
-
-            int x = 0;
-            int y = 0;
-
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < gridSize; i++)
             {
-                int[,] grid = new int[x++, y++];
-                Console.WriteLine(grid.GetLength(0)); //rows
-                Console.WriteLine(grid.GetLength(1)); //Columns 
+                _rows.Add(i);
+                _columns.Add(i);
+            }
+
+            _grid.Add(_rows);
+            _grid.Add(_columns);
+
+            //for (int i = 0; i < _grid.Count(); i++)
+            //{
+            //    Console.WriteLine(_grid[i]);
+            //}
+
+            foreach (var item in _grid)
+            {
+                Console.WriteLine(_grid[0].Count());
             }
         }
     }

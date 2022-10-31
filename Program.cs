@@ -6,7 +6,8 @@ namespace The_Fountain_of_objects
     {
         static void Main(string[] args)
         {
-            Grid.CreateGrid(4);
+            var grid = new Grid();
+            grid.CreateGrid(4);
         }
     }
 }
