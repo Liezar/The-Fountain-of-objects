@@ -6,13 +6,7 @@ namespace The_Fountain_of_objects
     {
         static void Main(string[] args)
         {
-            var grid = Map.Grid(4);
-
-            foreach (var item in grid)
-            {
-                Console.WriteLine(item);
-            }
-
+            var grid = new Map(4);
         }
     }
 }

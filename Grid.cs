@@ -13,7 +13,7 @@ namespace The_Fountain_of_objects
         private static List<int> _rows = new();
         private static List<int> _columns = new();
 
-        public static List<List<int>> Grid(int gridSize)
+        public Map(int gridSize)
         {
             for (int i = 0; i < gridSize; i++)
             {
@@ -23,8 +23,6 @@ namespace The_Fountain_of_objects
 
             _grid.Add(_rows);
             _grid.Add(_columns);
-
-            return _grid;
         }
     }
 }
