@@ -1,10 +1,12 @@
-﻿namespace The_Fountain_of_objects
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace The_Fountain_of_objects
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Grid.CreateGrid(4);
         }
     }
 }
