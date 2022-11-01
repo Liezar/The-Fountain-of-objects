@@ -21,13 +21,7 @@
             bool fountainOn = false;
             bool incorrectMove = true;
             bool gameRunning = true;
-            //bool gameRunning = true;
-
-            //while (gameRunning == true)
-            //{
-                
-            //while (incorrectMove == true && x != objectX && y != objectY )
-            //{
+            
             do
             {
                 Console.Write("In what direction do you want to move? ");
@@ -72,33 +66,30 @@
                 }
                 Console.WriteLine($"You moved to X:[{x}] Y:[{y}]\n------------------------");
 
-            } while (gameRunning);
-            //}
-
-
-            if (x == 2 && y == 0 && fountainOn == false) // object placement
-            {
-                Console.WriteLine("You hear water dripping in this room. The Fountain of Objects\r\nis here!");
-                string userInput2 = Console.ReadLine();
-                if (userInput2 == "enable fountain")
+                if (x == objectX && y == objectY && fountainOn == false) // object placement
                 {
-                    Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!");
-                    fountainOn = true;
+                    Console.WriteLine("You hear water dripping in this room. The Fountain of Objects\r\nis here!");
+                    string userInput2 = Console.ReadLine();
+                    if (userInput2 == "enable fountain")
+                    {
+                        Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!");
+                        fountainOn = true;
+                    }
+
                 }
 
-            }
+                if (x == 0 && y == 0 && fountainOn == false)
+                {
+                    Console.WriteLine("You see light in this room\r\ncoming from outside the cavern. This is the entrance.");
+                }
+                if (x == 0 && y == 0 && fountainOn == true)
+                {
+                    Console.WriteLine("The Fountain of Objects has been reactivated, and you have escaped with your life!\r\nYou win!");
+                    gameRunning = false;
 
-            if (x == 0 && y == 0 && fountainOn == false)
-            {
-                Console.WriteLine("You see light in this room\r\ncoming from outside the cavern. This is the entrance.");
-            }
-            if (x == 0 && y == 0 && fountainOn == true)
-            {
-                Console.WriteLine("The Fountain of Objects has been reactivated, and you have escaped with your life!\r\nYou win!");
-                gameRunning = false;
+                }
 
-            }
-            //}
+            } while (gameRunning);
         }
     }
 }
